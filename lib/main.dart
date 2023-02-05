@@ -26,13 +26,14 @@ class MyApp extends StatelessWidget {
       theme: currentTheme,
       //ThemeData.dark(useMaterial3: true),
       debugShowCheckedModeBanner: false,
-      initialRoute: 'login',
+      initialRoute: 'checking',
       routes: {
         'login': (context) => const LoginPage(),
         'home': (context) => const MainPage(),
         'register': (context) => const RegisterPage(),
         'checking': (context) => const CheckAuthPage(),
       },
+      scaffoldMessengerKey: NotificationsService.messengerkey,
     );
   }
 }

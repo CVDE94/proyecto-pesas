@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:peseneitor_3000/services/services.dart';
 import 'package:peseneitor_3000/src/views/views.dart';
+import 'package:provider/provider.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -14,6 +16,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+    final authService = Provider.of<AuthService>(context, listen: false);
 
     final pages = [
       const CestoDeRopa(),
@@ -21,6 +24,18 @@ class _MainPageState extends State<MainPage> {
     ];
 
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout_outlined),
+            onPressed: () {
+              authService.logout();
+              Navigator.pushReplacementNamed(context, 'login');
+            },
+          ),
+        ],
+      ),
       body: IndexedStack(
         index: selectedIndex,
         children: pages,

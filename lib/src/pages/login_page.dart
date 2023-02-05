@@ -119,7 +119,8 @@ class _LoginForm extends StatelessWidget {
                       if (errorMessage == null) {
                         Navigator.pushReplacementNamed(context, 'home');
                       } else {
-                        print(errorMessage);
+                        NotificationsService.showSnackbar(
+                            'User o Passwor Invalid');
                         loginForm.isLoading = false;
                       }
                     },

@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:peseneitor_3000/services/services.dart';
 import 'package:peseneitor_3000/src/pages/pages.dart';
