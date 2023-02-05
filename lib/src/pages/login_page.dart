@@ -1,5 +1,9 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:peseneitor_3000/providers/login_form_provider.dart';
+import 'package:peseneitor_3000/services/services.dart';
 import 'package:peseneitor_3000/src/ui/inputs/custom_inputs.dart';
 import 'package:peseneitor_3000/src/widgets/auth_background.dart';
 import 'package:peseneitor_3000/src/widgets/widgets.dart';
@@ -28,9 +32,17 @@ class LoginPage extends StatelessWidget {
             ],
           )),
           const SizedBox(height: 50),
-          const Text(
-            'Crear una nueva cuenta',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          TextButton(
+            onPressed: () =>
+                Navigator.pushReplacementNamed(context, 'register'),
+            style: ButtonStyle(
+                overlayColor:
+                    MaterialStateProperty.all(Colors.indigo.withOpacity(0.1)),
+                shape: MaterialStateProperty.all(const StadiumBorder())),
+            child: Text(
+              'Crear cuenta',
+              style: GoogleFonts.roboto(fontSize: 18, color: Colors.black45),
+            ),
           ),
           const SizedBox(height: 50),
         ],
@@ -95,17 +107,21 @@ class _LoginForm extends StatelessWidget {
                   ? null
                   : () async {
                       FocusScope.of(context).unfocus();
-
+                      final authService =
+                          Provider.of<AuthService>(context, listen: false);
                       if (!loginForm.isValidForm()) return;
 
                       loginForm.isLoading = true;
 
-                      await Future.delayed(const Duration(seconds: 2));
+                      final String? errorMessage = await authService.login(
+                          loginForm.email, loginForm.password);
 
-                      // TODO: validar si el login es correcto
-                      loginForm.isLoading = false;
-
-                      Navigator.pushReplacementNamed(context, 'home');
+                      if (errorMessage == null) {
+                        Navigator.pushReplacementNamed(context, 'home');
+                      } else {
+                        print(errorMessage);
+                        loginForm.isLoading = false;
+                      }
                     },
               child: Container(
                   padding:

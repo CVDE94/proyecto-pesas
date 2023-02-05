@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 class AuthBackground extends StatelessWidget {
@@ -16,9 +17,18 @@ class AuthBackground extends StatelessWidget {
       height: double.infinity,
       child: Stack(
         children: [
-          _PurpleBox(),
-          _HeaderIcon(),
-          child,
+          SlideInDown(
+            duration: const Duration(milliseconds: 800),
+            child: _PurpleBox(),
+          ),
+          SlideInLeft(
+            duration: const Duration(milliseconds: 1000),
+            child: _HeaderIcon(),
+          ),
+          SlideInUp(
+            duration: const Duration(milliseconds: 1000),
+            child: child,
+          ),
         ],
       ),
     );
@@ -32,7 +42,10 @@ class _HeaderIcon extends StatelessWidget {
       child: Container(
         width: double.infinity,
         margin: const EdgeInsets.only(top: 30),
-        child: const Icon(Icons.person_pin, color: Colors.white, size: 100),
+        child: SlideInRight(
+            duration: const Duration(milliseconds: 500),
+            child:
+                const Icon(Icons.person_pin, color: Colors.white, size: 100)),
       ),
     );
   }
