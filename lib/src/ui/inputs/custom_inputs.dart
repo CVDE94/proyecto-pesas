@@ -16,7 +16,7 @@ class CustomInputs {
       ),
       hintText: hint,
       labelText: label,
-      prefixIcon: Icon(icon, color: Colors.white),
+      prefixIcon: Icon(icon, color: Colors.grey),
       labelStyle: const TextStyle(color: Colors.grey),
       hintStyle: const TextStyle(color: Colors.grey),
     );
