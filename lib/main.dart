@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:peseneitor_3000/services/services.dart';
+import 'package:peseneitor_3000/services/socket_services.dart';
 import 'package:peseneitor_3000/src/pages/pages.dart';
 
 import 'package:peseneitor_3000/src/theme/theme.dart';
@@ -8,6 +9,7 @@ import 'package:provider/provider.dart';
 void main() => runApp(
       MultiProvider(
         providers: [
+          ChangeNotifierProvider(create: (context) => SocketService()),
           ChangeNotifierProvider(create: (context) => AuthService()),
           ChangeNotifierProvider(create: (context) => ThemeChanger(1)),
         ],
