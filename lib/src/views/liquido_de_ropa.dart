@@ -26,7 +26,7 @@ class _LiquidoDeRopaState extends State<LiquidoDeRopa> {
     pesoliquido = payload['peso'];
     try {
       valorDoubleliquido = double.parse(pesoliquido);
-      porcentajeliquido = valorDoubleliquido * 100;
+      porcentajeliquido = valorDoubleliquido * 70;
     } catch (e) {
       print("El valor $pesoliquido no es un número válido.");
     }
