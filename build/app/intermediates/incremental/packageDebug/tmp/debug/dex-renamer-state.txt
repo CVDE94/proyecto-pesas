@@ -1,0 +1,4 @@
+#Tue Feb 14 21:50:19 CST 2023
+base.0=F\:\\Proyecto Flutter Mobil\\00-proyecto-pesas\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

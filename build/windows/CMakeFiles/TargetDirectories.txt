@@ -1,0 +1,13 @@
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/CMakeFiles/INSTALL.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/CMakeFiles/ALL_BUILD.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/CMakeFiles/ZERO_CHECK.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/flutter/CMakeFiles/flutter_wrapper_app.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/flutter/CMakeFiles/flutter_assemble.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/flutter/CMakeFiles/INSTALL.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/runner/CMakeFiles/peseneitor_3000.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/runner/CMakeFiles/INSTALL.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/runner/CMakeFiles/ALL_BUILD.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/plugins/flutter_secure_storage_windows/CMakeFiles/flutter_secure_storage_windows_plugin.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/plugins/flutter_secure_storage_windows/CMakeFiles/INSTALL.dir
+F:/Proyecto Flutter Mobil/00-proyecto-pesas/build/windows/plugins/flutter_secure_storage_windows/CMakeFiles/ALL_BUILD.dir
